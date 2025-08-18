@@ -1,0 +1,11 @@
+#pragma once
+
+enum class CarState
+{
+    DRIVING,
+    DRIVING_NEED_TO_PITSTOP,
+    WAITING_FOR_PITSTOP,
+    ENTERING_PIT_LANE,
+    PIT_STOP,
+    EXITING_PIT_LANE
+};

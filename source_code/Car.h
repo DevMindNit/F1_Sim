@@ -4,8 +4,8 @@
 class Car
 {
     public:
-                    Car();
-                    ~Car();
+    Car();
+    ~Car();
 
     void            Run();
 

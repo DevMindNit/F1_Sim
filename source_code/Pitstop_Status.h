@@ -4,5 +4,5 @@ enum class PITSTOP_STATUS
 {
     FREE,
     BUSY,
-    WAITING
+    WAITING_FOR_CAR
 };
