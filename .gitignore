@@ -1,45 +1,48 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# === C++ build artifacts ===
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
 *.so
-*.dylib
+*.a
+*.out
+*.exe
 *.dll
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-.env
-.vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/c_cpp_properties.json
-*.code-workspace
-
-# Local History for Visual Studio Code
-.history/
+# === CMake files ===
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
 build/
+build-*/
 
-# Executables
-*.exe
-*.out
-*.app
+# === Compilation database ===
+compile_commands.json
+
+# === Logs and debugging ===
+*.log
+*.core
+core
+
+# === Editor/IDE files ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+
+# === Backup/temporary files ===
+*~
+*.swp
+*.bak
+*.tmp
+
+# === Secrets or personal credentials ===
+*.env
+*.pem
+*.key
+*.crt
+id_rsa
+id_rsa.pub

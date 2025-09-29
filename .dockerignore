@@ -1,0 +1,35 @@
+# Ignore Git files
+.git
+.gitignore
+
+# Ignore build artifacts
+build/
+build-*/
+*.o
+*.out
+*.a
+*.so
+*.exe
+*.obj
+
+# Ignore CMake artifacts
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets (if any)
+*.env
+*.pem
+*.key
+*.crt
+id_rsa
+id_rsa.pub
