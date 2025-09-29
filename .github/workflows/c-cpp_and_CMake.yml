@@ -1,0 +1,33 @@
+name: C++ & CMake CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the source code
+    - uses: actions/checkout@v4
+
+    # Step 2: Install dependencies (optional if all are available)
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake ninja-build build-essential
+
+    # Step 3: Configure the project using CMake and Ninja
+    - name: Configure
+      run: cmake -S . -B build -G Ninja
+
+    # Step 4: Build the project
+    - name: Build
+      run: cmake --build build
+
+    # Step 5: Run tests (if you have tests defined via CTest or add_test())
+    - name: Run tests
+      run: ctest --test-dir build --output-on-failure
